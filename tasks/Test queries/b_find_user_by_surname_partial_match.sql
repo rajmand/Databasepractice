@@ -1,0 +1,3 @@
+EXPLAIN ANALYZE
+SELECT * FROM student 
+WHERE surname LIKE 'lastName305%'

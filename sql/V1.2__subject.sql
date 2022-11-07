@@ -1,0 +1,12 @@
+DROP TABLE IF EXISTS subject CASCADE;
+
+CREATE TABLE SUBJECT(
+	SUBJECT_ID INT PRIMARY KEY generated always as identity,
+	SUBJECT_NAME CHAR(50) NOT NULL,
+	TUTOR CHAR(30) NOT NULL
+);
+
+ALTER TABLE public.subject OWNER TO postgres;
+
+CREATE SEQUENCE subject_id_seq AS INT
+OWNED BY subject.subject_id;
